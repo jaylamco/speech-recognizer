@@ -1,0 +1,55 @@
+{
+  "name": "iot-server",
+  "version": "1.0.0",
+  "description": "iot server",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "egg": "^2.2.1",
+    "egg-scripts": "^2.5.0",
+    "egg-view-ejs": "^2.0.0",
+    "ffmpeg-static": "^2.3.0",
+    "ffprobe-static": "^3.0.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "form-urlencoded": "^3.0.0",
+    "js-base64": "^2.4.9",
+    "lodash": "^4.17.11",
+    "md5": "^2.2.1",
+    "urlencode": "^1.1.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.0.0",
+    "egg-bin": "^4.3.5",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.14.0",
+    "eslint": "^4.11.0",
+    "eslint-config-egg": "^6.0.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-iot-server",
+    "stop": "egg-scripts stop --title=egg-server-iot-server",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "JayLamco",
+  "license": "MIT"
+}
