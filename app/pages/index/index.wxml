@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <view class="userinfo-avatar">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+
+    <view class="userinfo-nickname">Hello,
+      <open-data type="userNickName"></open-data>
+    </view>
+    <text class="desc">I am IOT-Spockerman, long press the icon below and instruction!</text>
+    <block wx:if="{{!!deviceId}}">
+      <image src="{{recordIcon}}" class="icon-record" catchtouchstart='startRecord' catchtouchend='stopRecord'></image>
+      <text class="btn-rebind" catchtouchstart='rebind'>重新绑定</text>
+    </block>
+
+    <image wx:if="{{!deviceId}}" src="./images/icon_scan.png" class="icon-scan" catchtouchstart='startScan'></image>
+  </view>
+  <view class='toast' wx:if="{{!!command}}">
+    <text>{{command}}</text>
+  </view>
+</view>
